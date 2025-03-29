@@ -25,31 +25,15 @@ public class EnnemyManager : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        if (nmbdevague == 0)
+        for (int i = 0; i < EnemyNumber + 2 * nmbdevague; i++)
         {
-            for (int i = 0; i < EnemyNumber ; i++)
-            {
-                float x = camTransform.position.x + Random.Range(-SpawnRange, SpawnRange);
-                float y = camTransform.position.y + Random.Range(-SpawnRange, SpawnRange);
-                float z = camTransform.position.z + Random.Range(-SpawnRange, SpawnRange);
-                Vector3 spawnPos = new Vector3(x, y, z);
-                Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
-            }
-            nmbenemy += EnemyNumber;
+            float x = camTransform.position.x + Random.Range(-SpawnRange, SpawnRange);
+            float y = camTransform.position.y + Random.Range(-SpawnRange, SpawnRange);
+            float z = camTransform.position.z + Random.Range(-SpawnRange, SpawnRange);
+            Vector3 spawnPos = new Vector3(x, y, z);
+            Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
         }
-        else
-        {
-            for (int i = 0; i < EnemyNumber + 2*nmbdevague ; i++)
-            {
-                float x = camTransform.position.x + Random.Range(-SpawnRange, SpawnRange);
-                float y = camTransform.position.y + Random.Range(-SpawnRange, SpawnRange);
-                float z = camTransform.position.z + Random.Range(-SpawnRange, SpawnRange);
-                Vector3 spawnPos = new Vector3(x, y, z);
-                Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
-            }
-            nmbenemy +=  EnemyNumber + 2*nmbdevague;
-        }
-        
+        nmbenemy += EnemyNumber + 2 * nmbdevague;
     }
 
     void Direction(GameObject ennemy)
