@@ -1,0 +1,136 @@
+{
+    "name": "playerInput",
+    "maps": [
+        {
+            "name": "NTS",
+            "id": "fc2546e2-17d2-4559-a559-8c8a6c94c141",
+            "actions": [
+                {
+                    "name": "Space",
+                    "type": "Button",
+                    "id": "ba873558-9550-4f9e-a7d2-7d5ddba2f161",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Horizontal",
+                    "type": "Button",
+                    "id": "d1e87f44-ff92-43c3-93eb-ac7481fd6dad",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchPress",
+                    "type": "PassThrough",
+                    "id": "bd44ccd7-dbff-47a5-9223-b9885c2a59f2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchPos",
+                    "type": "PassThrough",
+                    "id": "a64ed759-0903-49c5-a6b4-99e2c16c44f1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchPhase",
+                    "type": "PassThrough",
+                    "id": "86bf1fd3-4638-430b-91dd-bffe6e1e4560",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "df0c88db-79cf-451d-9495-0531d2967d0c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Space",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "601633bc-b315-477d-81f5-ccf5a9403c81",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "a1116211-c151-464f-9aba-84871448e178",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "43d5e493-72da-48b1-961d-1feab77f5274",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b86b1600-f7de-4a29-9e7c-0c3d56eb53c1",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ad3aa38e-c9aa-4270-88b2-876a049469a6",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPos",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c7e2bc5-e797-4130-98d2-4ed5f5031131",
+                    "path": "<Touchscreen>/primaryTouch/phase",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPhase",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
