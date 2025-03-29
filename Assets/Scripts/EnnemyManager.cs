@@ -11,7 +11,6 @@ public class EnnemyManager : MonoBehaviour
     public GameObject Cone;
     public bool vague;
     public int nmbdevague;
-    public int nmbenemy;
     public int EnemyNumber = 10;
     public float SpawnRange = 3f;
 
@@ -33,7 +32,6 @@ public class EnnemyManager : MonoBehaviour
             Vector3 spawnPos = new Vector3(x, y, z);
             Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
         }
-        nmbenemy += EnemyNumber + 2 * nmbdevague;
     }
 
     void Direction(GameObject ennemy)
@@ -52,5 +50,6 @@ public class EnnemyManager : MonoBehaviour
             vague = false;
             nmbdevague += 1;
         }
+        
     }
 }

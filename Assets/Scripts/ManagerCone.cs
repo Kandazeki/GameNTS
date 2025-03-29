@@ -53,22 +53,10 @@ public class ManagerCone : MonoBehaviour
         {
             Destroy(PrefabToInstantiate);
         }
-        while(vaguesetter.nmbenemy != 0)
-        {
-            ConeLife -= 1;
-        }
     }
 
     public void Buttonvague()
     {
-        if (vaguesetter.nmbenemy == 0)
-        {
-            vaguesetter.vague = true;
-        }
-        else
-        {
-            Debug.Log("All ennemy needs to be dead");
-        }
- 
+        vaguesetter.vague = true;
     }
 }
