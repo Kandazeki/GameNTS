@@ -12,6 +12,7 @@ public class KillingCam2 : MonoBehaviour
     public PlayerInput playerInput;
     private InputAction touchPressAction;
     private InputAction touchPosAction;
+    public EnnemyManager em;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class KillingCam2 : MonoBehaviour
                     var clone = Instantiate(ParticleEffect, hitObj.transform.position, Quaternion.identity);
                     clone.transform.localScale = hitObj.transform.localScale;
                     Destroy(hitObj);
+                    em.nmbenemy -= 1;
                 }
         }
         

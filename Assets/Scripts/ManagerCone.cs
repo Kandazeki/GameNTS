@@ -57,6 +57,14 @@ public class ManagerCone : MonoBehaviour
 
     public void Buttonvague()
     {
-        vaguesetter.vague = true;
+        if (vaguesetter.nmbenemy == 0)
+        {
+            vaguesetter.vague = true;
+        }
+        else
+        {
+            Debug.Log("All ennemy needs to be dead");
+        }
+ 
     }
 }
