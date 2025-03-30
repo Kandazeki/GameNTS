@@ -1931,6 +1931,7 @@ MonoBehaviour:
   TypeToTrack: 2
   PrefabToInstantiate: {fileID: 2139998035077079346, guid: 7bb6b7876886d0b4db04c1449d5c7f05, type: 3}
   PlayerInput: {fileID: 41201031}
+  Conalaready: 0
   vaguesetter: {fileID: 1078447976}
   ConeLife: 0
   life: {fileID: 316937274}
