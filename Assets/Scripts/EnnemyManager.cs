@@ -9,13 +9,12 @@ public class EnnemyManager : MonoBehaviour
 {
     public GameObject EnemyPrefab;
     public Transform camTransform;
-    public GameObject Cone;
     public bool vague;
     public int nmbdevague;
     public int enemy;
     public int EnemyNumber = 10;
     public float SpawnRange = 3f;
-    
+
     [SerializeField]private TMP_Text count;
 
     public Camera cam;
@@ -35,17 +34,13 @@ public class EnnemyManager : MonoBehaviour
             float y = camTransform.position.y + Random.Range(-SpawnRange, SpawnRange);
             float z = camTransform.position.z + Random.Range(-SpawnRange, SpawnRange);
             Vector3 spawnPos = new Vector3(x, y, z);
-            Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
+            Instantiate(EnemyPrefab, spawnPos, Quaternion.Euler(90f,0f,0f));
             enemy += 1;
         }
         count.text = "Nombre d'ennemis : " + enemy;
     }
 
-    void Direction(GameObject ennemy)
-    {
-        Vector3 newposition = new Vector3();
-        ennemy.transform.position = newposition;
-    }
+
 
 
     // Update is called once per frame

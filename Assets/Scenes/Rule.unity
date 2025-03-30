@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 19}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &148055706
@@ -707,8 +707,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273, y: 235}
-  m_SizeDelta: {x: 1200, y: 1000}
+  m_AnchoredPosition: {x: 78, y: 316}
+  m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883920145
 MonoBehaviour:
@@ -732,9 +732,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Bien le bonjour cher Conard,\nNous allons vous presenter aujourd'hui,
     \nun jeu, plus precisement un jeu de cone.\nComment me direz-vous un cone, \nun
-    simple cone comme vous peut-il \nle heros de quoi que ce soit ?\nVous serez le
-    heros d'un autre cone,\nfaible encore jeune et inexperiemente\nVous devrez le
-    proteger des terribles\naliens de Pulcoid34 qui l'abreuveront,\nsans son consemtement
+    simple cone comme vous peut-il \netre le heros de quoi que ce soit ?\nVous serez
+    le heros d'un autre cone,\nfaible encore jeune et inexperiemente\nVous devrez
+    le proteger des terribles\naliens de Pulcoid34 qui l'abreuveront,\nsans son consemtement
     de pulco\n(@la_bouteille_de_pulco_lambda)\n\nEnfin, nous pourrons dire que la
     conitude\na servi a quelque chose la salvation\ndes notres.\n\nCone-ment,\nCone
     One et Conifere\n"
@@ -764,8 +764,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.0030515413, y: 0, z: 168.07446, w: 0}
+  m_margin: {x: -0.0030515413, y: 0, z: 149.32861, w: -485.85077}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -997,7 +997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 45, y: 212}
+  m_AnchoredPosition: {x: 45, y: 173}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2133324856

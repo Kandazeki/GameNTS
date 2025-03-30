@@ -15,7 +15,7 @@ public class ManagerCone : MonoBehaviour
     public PlayerInput PlayerInput;
     private InputAction touchPressAction;
     private InputAction touchPosAction;
-    private bool Conalaready;
+    public bool Conalaready;
     public EnnemyManager vaguesetter;
 
     public int ConeLife;
@@ -62,7 +62,11 @@ public class ManagerCone : MonoBehaviour
             Conalaready =true;
         }
         nmbupdate += 1;
-        if (nmbupdate == 1000 && wasclicked && vaguesetter.enemy != 0)
+        if (nmbupdate > 1000)
+        {
+            ConeLife = 105;
+        }
+        if (nmbupdate >= 1000 && wasclicked && vaguesetter.enemy != 0)
         {
             ConeLife = ConeLife - 5 <= 0 ? 1 : ConeLife - 5;
             life.text = "Cone Life : "+ ConeLife;
