@@ -3,6 +3,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -60,16 +61,16 @@ public class ManagerCone : MonoBehaviour
             IsCone();
             Conalaready =true;
         }
-        if (ConeLife == 0)
-        {
-            Destroy(PrefabToInstantiate);
-        }
         nmbupdate += 1;
         if (nmbupdate == 1000 && wasclicked && vaguesetter.enemy != 0)
         {
-            ConeLife -= 5;
+            ConeLife = ConeLife - 5 <= 0 ? 1 : ConeLife - 5;
             life.text = "Cone Life : "+ ConeLife;
             nmbupdate = 0;
+        }
+        if (ConeLife == 1)
+        {
+            SceneManager.LoadScene("GameOver");
         }
         Debug.Log(ConeLife);
         
