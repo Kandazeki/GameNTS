@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.ARFoundation;
@@ -15,7 +17,13 @@ public class ManagerCone : MonoBehaviour
     private bool Conalaready;
     public EnnemyManager vaguesetter;
 
-    private int ConeLife;
+    public int ConeLife;
+
+    [SerializeField]private TMP_Text life;
+
+    public bool wasclicked;
+
+    public int nmbupdate;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +32,11 @@ public class ManagerCone : MonoBehaviour
         touchPosAction = PlayerInput.actions["TouchPos"];
         Conalaready = false;
         ConeLife = 100;
+        nmbupdate = 0;
+        wasclicked =false;
     }
 
-    private void IsCone()
+    public void IsCone()
     {
         var touchPos = touchPosAction.ReadValue<Vector2>();
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -35,7 +45,7 @@ public class ManagerCone : MonoBehaviour
         {
             ARRaycastHit firstHit = hits[0];
             Vector3 vecteurcorrected = new Vector3(firstHit.pose.position.x, firstHit.pose.position.y+0.2f, firstHit.pose.position.z);
-            Instantiate(PrefabToInstantiate, vecteurcorrected, firstHit.pose.rotation);
+            Instantiate(PrefabToInstantiate, vecteurcorrected, Quaternion.Euler(270f,0f,0f));
         }
     }
 
@@ -44,27 +54,30 @@ public class ManagerCone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+  
         if(touchPressAction.WasPerformedThisFrame() && !Conalaready)
         {
             IsCone();
             Conalaready =true;
         }
-        if(ConeLife == 0)
+        if (ConeLife == 0)
         {
             Destroy(PrefabToInstantiate);
         }
+        nmbupdate += 1;
+        if (nmbupdate == 1000 && wasclicked && vaguesetter.enemy != 0)
+        {
+            ConeLife -= 5;
+            life.text = "Cone Life : "+ ConeLife;
+            nmbupdate = 0;
+        }
+        Debug.Log(ConeLife);
+        
     }
 
     public void Buttonvague()
     {
-        if (vaguesetter.nmbenemy == 0)
-        {
-            vaguesetter.vague = true;
-        }
-        else
-        {
-            Debug.Log("All ennemy needs to be dead");
-        }
- 
+        vaguesetter.vague = true;
+        wasclicked =true;
     }
 }

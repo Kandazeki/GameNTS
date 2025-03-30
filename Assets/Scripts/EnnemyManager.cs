@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.ARSubsystems;
+using TMPro;
 
 public class EnnemyManager : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class EnnemyManager : MonoBehaviour
     public GameObject Cone;
     public bool vague;
     public int nmbdevague;
-    public int nmbenemy;
+    public int enemy;
     public int EnemyNumber = 10;
     public float SpawnRange = 3f;
+    
+    [SerializeField]private TMP_Text count;
 
     public Camera cam;
     // Start is called before the first frame update
@@ -21,6 +24,7 @@ public class EnnemyManager : MonoBehaviour
     {
         vague = false;
         nmbdevague =0;
+        enemy = 0;
     }
 
     public void SpawnEnemy()
@@ -32,8 +36,9 @@ public class EnnemyManager : MonoBehaviour
             float z = camTransform.position.z + Random.Range(-SpawnRange, SpawnRange);
             Vector3 spawnPos = new Vector3(x, y, z);
             Instantiate(EnemyPrefab, spawnPos, Quaternion.identity);
+            enemy += 1;
         }
-        nmbenemy += EnemyNumber + 2 * nmbdevague;
+        count.text = "Nombre d'ennemis : " + enemy;
     }
 
     void Direction(GameObject ennemy)

@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using TMPro;
 
 public class KillingCam2 : MonoBehaviour
 {
+    [SerializeField]private TMP_Text countleft;
     public GameObject ParticleEffect;
     private Vector2 touchPos;
     private RaycastHit hit;
@@ -12,7 +14,9 @@ public class KillingCam2 : MonoBehaviour
     public PlayerInput playerInput;
     private InputAction touchPressAction;
     private InputAction touchPosAction;
-    public EnnemyManager em;
+    public EnnemyManager enemisbeg;
+
+    public int left;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +24,12 @@ public class KillingCam2 : MonoBehaviour
         cam = GetComponent<Camera>();
         touchPressAction = playerInput.actions["TouchPress"];
         touchPosAction = playerInput.actions["TouchPos"];
+        left = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("ok");
         if (!touchPressAction.WasPerformedThisFrame())
         {
             return;
@@ -40,7 +44,8 @@ public class KillingCam2 : MonoBehaviour
                     var clone = Instantiate(ParticleEffect, hitObj.transform.position, Quaternion.identity);
                     clone.transform.localScale = hitObj.transform.localScale;
                     Destroy(hitObj);
-                    em.nmbenemy -= 1;
+                    left += 1;
+                    countleft.text = "Nombre d'ennemi tue : " + left;
                 }
         }
         
