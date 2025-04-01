@@ -15,6 +15,7 @@ public class KillingCam2 : MonoBehaviour
     private InputAction touchPressAction;
     private InputAction touchPosAction;
     public EnnemyManager enemisbeg;
+    public static bool audio;
 
     public int left;
 
@@ -25,6 +26,7 @@ public class KillingCam2 : MonoBehaviour
         touchPressAction = playerInput.actions["TouchPress"];
         touchPosAction = playerInput.actions["TouchPos"];
         left = 0;
+        audio = false;
     }
 
     // Update is called once per frame
@@ -46,6 +48,7 @@ public class KillingCam2 : MonoBehaviour
                     Destroy(hitObj);
                     left += 1;
                     countleft.text = "Nombre d'ennemi tue : " + left;
+                    audio = true;
                 }
         }
         

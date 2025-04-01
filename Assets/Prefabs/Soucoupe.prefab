@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 955713195146734082}
   - component: {fileID: 7087463347093980977}
   - component: {fileID: 602724017470106789}
+  - component: {fileID: 7877464797573190730}
   m_Layer: 0
   m_Name: Soucoupe
   m_TagString: Ennemy
@@ -119,3 +120,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1150326230618654510, guid: 7bb6b7876886d0b4db04c1449d5c7f05, type: 3}
+--- !u!114 &7877464797573190730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795327679660866454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a99a06a24e59904d819e7163ee38d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: f3c763409db606a49adae84cca6fec7a, type: 3}
+  volume: 0.1
+  pitch: 0.1
+  b: 0
